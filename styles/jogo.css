@@ -31,12 +31,26 @@
           align-items: center;
 }
 
+* body .sessao h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+* body .sessao h3 {
+  font-size: 18px;
+  font-style: oblique;
+  color: yellow;
+  margin-top: 10px;
+}
+
 * body .sessao .quadrado {
   margin: 80px 0;
   background-color: green;
   width: 90%;
   height: 150px;
   border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 2px black;
+          box-shadow: 2px 2px 2px black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +61,7 @@
           align-items: center;
 }
 
-* body .sessao .quadrado .regressivo {
+* body .sessao .quadrado .multiplicacao {
   color: white;
   font-size: 40px;
 }
@@ -59,17 +73,20 @@
   font-size: 50px;
 }
 
-* body .sessao h2 {
-  color: #fff9f9;
-  margin-bottom: 20px;
+* body .sessao .feedbackJogada {
+  background-color: white;
+  -webkit-box-shadow: 1px 2px 2px black;
+          box-shadow: 1px 2px 2px black;
+  border-radius: 3px;
+  -webkit-animation: ease 500ms;
+          animation: ease 500ms;
 }
 
-* body .sessao button {
-  width: 100%;
-  height: 50px;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 600;
-  background-color: white;
+* body .sessao .feedbackJogada.quandoCorreto {
+  color: #10b110;
+}
+
+* body .sessao .feedbackJogada.quandoIncorreto {
+  color: red;
 }
 /*# sourceMappingURL=jogo.css.map */
