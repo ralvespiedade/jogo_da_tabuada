@@ -52,7 +52,7 @@ function verificacaoResposta(evento) {
 
 //2ª jogada em diante
 function novaJogada(){
-    if (quantidadeJogadas > 10) {
+    if (quantidadeJogadas > 9) {
 
         console.log('Game Over!')
         console.log(`Score: ${pontuacao}`)
@@ -62,10 +62,10 @@ function novaJogada(){
         quantidadeJogadas++
         console.log('--------------------------------------')
         console.log(`Jogada Nº ${quantidadeJogadas} inicada`)
-        let num1 = parseInt(Math.random()*10)
-        let num2 = parseInt(Math.random()*10)
-        let jogada = `${num1} x ${num2} = ` 
-        let respostaCorreta = num1*num2
+        num1 = parseInt(Math.random()*10)
+        num2 = parseInt(Math.random()*10)
+        jogada = `${num1} x ${num2} = ` 
+        respostaCorreta = num1*num2
         
         
         multiplicacao.innerHTML = jogada
