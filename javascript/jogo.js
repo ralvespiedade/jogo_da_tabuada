@@ -1,4 +1,4 @@
-//1ª jogada
+//Declaração de variáveis
 
 let multiplicacao = document.querySelector('.multiplicacao')
 let respostaUsuario = document.querySelector('.resposta')
@@ -8,15 +8,17 @@ let num1 = parseInt(Math.random()*10)
 let num2 = parseInt(Math.random()*10)
 let jogada = `${num1} x ${num2} = ` 
 let respostaCorreta = num1*num2
-let quantidadeJogadas = 1
+let quantidadeJogadas = 0
 let pontuacao = 0
 multiplicacao.innerHTML = jogada 
 
+/*
 console.log('--------------------------------------')
 console.log(`Jogada Nº ${quantidadeJogadas} iniciada`)
 console.log(`${num1} X ${num2} = ${respostaCorreta}`)
 console.log(`Aguardando a resposta do usuário.`)
-
+*/
+novaJogada()
 
 function verificacaoResposta(evento) {
     //console.log(evento.key)
@@ -50,7 +52,7 @@ function verificacaoResposta(evento) {
     }
 }
 
-//2ª jogada em diante
+//Rodadas 1 a 10
 function novaJogada(){
     if (quantidadeJogadas > 9) {
 
