@@ -4,10 +4,10 @@ let multiplicacao = document.querySelector('.multiplicacao')
 let respostaUsuario = document.querySelector('.resposta')
 respostaUsuario.addEventListener('keypress', verificacaoResposta)
 let feedbackJogada = document.querySelector('.feedbackJogada')
-let num1 = parseInt(Math.random()*10)
-let num2 = parseInt(Math.random()*10)
-let jogada = `${num1} x ${num2} = ` 
-let respostaCorreta = num1*num2
+let num1
+let num2
+let jogada 
+let respostaCorreta
 let quantidadeJogadas = 0
 let pontuacao = 0
 multiplicacao.innerHTML = jogada 
@@ -43,7 +43,7 @@ function verificacaoResposta(evento) {
             console.log(`Resposta usuário ${respostaUsuario.value} está incorreta!!`)
             console.log(`Fim da jogada Nº ${quantidadeJogadas}`)
             console.log('**************************************')
-            pontuacao--
+            
         }
         
         console.log(`Pontuação atual: ${pontuacao}`)
@@ -55,7 +55,12 @@ function verificacaoResposta(evento) {
 //Rodadas 1 a 10
 function novaJogada(){
     if (quantidadeJogadas > 9) {
-
+        
+        //Aqui precisa fazer o frontend do "Game Over"
+        //Mostrar a pontuação
+        //surgir com o botão de jogar novamente
+        //parar o eventListener do input
+        fim_jogo(pontuacao)
         console.log('Game Over!')
         console.log(`Score: ${pontuacao}`)
 
@@ -79,6 +84,17 @@ function novaJogada(){
         verificacaoResposta()
     }
     
+}
+
+function fim_jogo(pontuacao) {
+    const $h2 = document.querySelector('h2')
+    const $h3 = document.querySelector('h3')
+    const $quadrado = document.querySelector('.quadrado')
+    
+    $h2.innerText = `Fim de Jogo`
+    $h3.innerText = `Pontuação: ${pontuacao}`
+    $quadrado.style = 'display: none;'
+
 }
 
 

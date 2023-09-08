@@ -1,92 +1,60 @@
 * {
   margin: 0;
 }
-
 * body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 * body .sessao {
   width: 350px;
   height: 100vh;
   text-align: center;
-  background-color: #b91cce;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: rgb(185, 28, 206);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 * body .sessao h2 {
   color: white;
   margin-bottom: 10px;
 }
-
 * body .sessao h3 {
   font-size: 18px;
   font-style: oblique;
   color: yellow;
   margin-top: 10px;
 }
-
 * body .sessao .quadrado {
   margin: 80px 0;
   background-color: green;
   width: 90%;
   height: 150px;
   border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 2px black;
-          box-shadow: 2px 2px 2px black;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 2px 2px 2px black;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
-
 * body .sessao .quadrado .multiplicacao {
   color: white;
   font-size: 40px;
 }
-
 * body .sessao .quadrado .resposta {
   width: 100px;
   height: 100px;
   border-radius: 7px;
   font-size: 50px;
 }
-
 * body .sessao .feedbackJogada {
   background-color: white;
-  -webkit-box-shadow: 1px 2px 2px black;
-          box-shadow: 1px 2px 2px black;
+  box-shadow: 1px 2px 2px black;
   border-radius: 3px;
-  -webkit-animation: ease 500ms;
-          animation: ease 500ms;
+  animation: ease 500ms;
 }
-
 * body .sessao .feedbackJogada.quandoCorreto {
-  color: #10b110;
+  color: rgb(16, 177, 16);
 }
-
 * body .sessao .feedbackJogada.quandoIncorreto {
   color: red;
-}
-/*# sourceMappingURL=jogo.css.map */
+}/*# sourceMappingURL=jogo.css.map */

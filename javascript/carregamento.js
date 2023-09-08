@@ -1,5 +1,5 @@
 let regressivo = document.querySelector('.regressivo')
-let count = 4
+let count = 3
 
 let delay = setInterval(function() {
     
