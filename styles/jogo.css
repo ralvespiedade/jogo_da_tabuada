@@ -4,6 +4,7 @@
 * body {
   display: flex;
   justify-content: center;
+  font-family: "Prompt", sans-serif;
 }
 * body .sessao {
   width: 350px;
@@ -19,11 +20,14 @@
   color: white;
   margin-bottom: 10px;
 }
-* body .sessao h3 {
-  font-size: 18px;
+* body .sessao .title2 {
+  font-size: 30px;
   font-style: oblique;
-  color: yellow;
   margin-top: 10px;
+  font-family: "Bungee Spice", cursive;
+  background-color: black;
+  width: 100%;
+  height: 60px;
 }
 * body .sessao .quadrado {
   margin: 80px 0;
@@ -39,12 +43,15 @@
 * body .sessao .quadrado .multiplicacao {
   color: white;
   font-size: 40px;
+  font-family: "Prompt", sans-serif;
 }
 * body .sessao .quadrado .resposta {
   width: 100px;
   height: 100px;
   border-radius: 7px;
   font-size: 50px;
+  font-family: "Prompt", sans-serif;
+  text-align: center;
 }
 * body .sessao .feedbackJogada {
   background-color: white;
@@ -57,4 +64,16 @@
 }
 * body .sessao .feedbackJogada.quandoIncorreto {
   color: red;
+}
+* body .sessao button {
+  display: none;
+  height: 32px;
+  width: 160px;
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: darkslategrey;
+  font-family: "Bungee Spice", cursive;
+}
+* body .sessao button.play_again {
+  color: blue;
 }/*# sourceMappingURL=jogo.css.map */

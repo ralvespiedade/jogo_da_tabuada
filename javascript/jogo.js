@@ -12,18 +12,19 @@ let quantidadeJogadas = 0
 let pontuacao = 0
 multiplicacao.innerHTML = jogada 
 
-/*
-console.log('--------------------------------------')
-console.log(`Jogada Nº ${quantidadeJogadas} iniciada`)
-console.log(`${num1} X ${num2} = ${respostaCorreta}`)
-console.log(`Aguardando a resposta do usuário.`)
-*/
+
+// console.log('--------------------------------------')
+// console.log(`Jogada Nº ${quantidadeJogadas} iniciada`)
+// console.log(`${num1} X ${num2} = ${respostaCorreta}`)
+// console.log(`Aguardando a resposta do usuário.`)
+
 novaJogada()
 
 function verificacaoResposta(evento) {
     //console.log(evento.key)
     if (evento.key == 'Enter') {
         if (parseInt(respostaUsuario.value) == respostaCorreta) {
+            
             feedbackJogada.classList.add('quandoCorreto')
             setTimeout(function() {
                 feedbackJogada.innerHTML = ''
@@ -33,7 +34,9 @@ function verificacaoResposta(evento) {
             console.log(`Fim da jogada Nº ${quantidadeJogadas}`)
             console.log('**************************************')
             pontuacao++
+
         } else {
+            
             feedbackJogada.classList.add('quandoIncorreto')
             feedbackJogada.innerHTML = 'Resposta incorreta!!'
             setTimeout(function() {
@@ -88,12 +91,19 @@ function novaJogada(){
 
 function fim_jogo(pontuacao) {
     const $h2 = document.querySelector('h2')
-    const $h3 = document.querySelector('h3')
+    const $h3 = document.querySelector('.title2')
+    const $btNovaJogada = document.querySelector('.play_again')
+    const $sair = document.querySelector('.exit')
     const $quadrado = document.querySelector('.quadrado')
     
-    $h2.innerText = `Fim de Jogo`
+    $h2.innerText = `Fim da Partida`
     $h3.innerText = `Pontuação: ${pontuacao}`
     $quadrado.style = 'display: none;'
+    $btNovaJogada.style = 'display: block;'
+    $btNovaJogada.onclick = function() {
+        window.location.href = 'carregamento.html'
+    }
+    $sair.style = 'display: block;'
 
 }
 
