@@ -4,6 +4,7 @@ let multiplicacao = document.querySelector('.multiplicacao')
 let respostaUsuario = document.querySelector('.resposta')
 respostaUsuario.addEventListener('keypress', verificacaoResposta)
 let feedbackJogada = document.querySelector('.feedbackJogada')
+let progresso = document.querySelector('.progresso')
 let num1
 let num2
 let jogada 
@@ -55,8 +56,11 @@ function verificacaoResposta(evento) {
     }
 }
 
-//Rodadas 1 a 10
+//Rodadas 0 a 9
+
 function novaJogada(){
+
+    progresso.style = `width: ${(quantidadeJogadas) * 10}%;`
     if (quantidadeJogadas > 9) {
         
         //Aqui precisa fazer o frontend do "Game Over"
