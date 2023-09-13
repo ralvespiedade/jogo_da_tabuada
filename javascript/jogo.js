@@ -13,7 +13,6 @@ let quantidadeJogadas = 0
 let pontuacao = 0
 multiplicacao.innerHTML = jogada 
 
-
 // console.log('--------------------------------------')
 // console.log(`Jogada Nº ${quantidadeJogadas} iniciada`)
 // console.log(`${num1} X ${num2} = ${respostaCorreta}`)
@@ -24,6 +23,7 @@ novaJogada()
 function verificacaoResposta(evento) {
     //console.log(evento.key)
     if (evento.key == 'Enter') {
+
         if (parseInt(respostaUsuario.value) == respostaCorreta) {
             
             feedbackJogada.classList.add('quandoCorreto')
@@ -34,33 +34,45 @@ function verificacaoResposta(evento) {
             console.log(`Resposta usuário ${respostaUsuario.value} está correta!!`)
             console.log(`Fim da jogada Nº ${quantidadeJogadas}`)
             console.log('**************************************')
+            respostaUsuario.value = ''
             pontuacao++
-
-        } else {
-            
+             //Se a resposta for vazio ou não numérico 
+        } else if (respostaUsuario.value == "" || /[^0-9]/g.test(respostaUsuario.value) == true) {
+            console.log('Dentro do else if')
+            respostaUsuario.value = ''
+            feedbackJogada.innerHTML = '[Erro} Digite um número.'
             feedbackJogada.classList.add('quandoIncorreto')
-            feedbackJogada.innerHTML = 'Resposta incorreta!!'
+            verificacaoResposta()
             setTimeout(function() {
                 feedbackJogada.innerHTML = ''
-                feedbackJogada.classList.remove('quandoIncorreto')
+            }, 2000)
+
+        } else {
+            feedbackJogada.classList.add('quandoIncorreto')
+            feedbackJogada.innerHTML = 'Resposta incorreta!!'
+            respostaUsuario.value = ""
+            setTimeout(function() {
+                feedbackJogada.innerHTML = ''
+                //feedbackJogada.classList.remove('quandoIncorreto')
             }, 1000)
             console.log(`Resposta usuário ${respostaUsuario.value} está incorreta!!`)
             console.log(`Fim da jogada Nº ${quantidadeJogadas}`)
             console.log('**************************************')
             
         }
-        
+        novaJogada()
         console.log(`Pontuação atual: ${pontuacao}`)
         
-        novaJogada()
+        
     }
 }
 
 //Rodadas 0 a 9
 
 function novaJogada(){
-
+    //aumenta a barra de progresso.
     progresso.style = `width: ${(quantidadeJogadas) * 10}%;`
+    
     if (quantidadeJogadas > 9) {
         
         //Aqui precisa fazer o frontend do "Game Over"
