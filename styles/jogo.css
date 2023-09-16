@@ -1,5 +1,14 @@
 * {
   margin: 0;
+  /*
+  Paleta de Cores
+   #FFA90B Orange(web)
+   #C52E16 Engineering orange
+   #001524 Rich black
+   #A01A7D Fandango
+   #177E89 Teal
+
+  */
 }
 * body {
   display: flex;
@@ -45,9 +54,20 @@
   box-shadow: 3px 3px 5px black;
 }
 * body .sessao .barra .progresso {
-  background-color: orange;
+  background-color: #faa90b;
   height: 100%;
   border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* body .sessao .barra .progresso .shine {
+  display: block;
+  background-color: #f6d78e;
+  width: 100%;
+  height: 20%;
+  margin: 0 7px 10px 7px;
+  border-radius: 3px;
 }
 * body .sessao .quadrado {
   margin: 45px 0;
