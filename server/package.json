@@ -1,0 +1,22 @@
+{
+  "name": "jogo_da_tabuada",
+  "version": "1.0.0",
+  "description": "um jogo que ajuda treinar a tabuada\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001br\u001b[C\u001b\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Da treinar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ralvespiedade/jogo_da_tabuada.git"
+  },
+  "keywords": [
+    "lua@8189"
+  ],
+  "author": "Ricardo Alves Piedade Filho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ralvespiedade/jogo_da_tabuada/issues"
+  },
+  "homepage": "https://github.com/ralvespiedade/jogo_da_tabuada#readme"
+}
